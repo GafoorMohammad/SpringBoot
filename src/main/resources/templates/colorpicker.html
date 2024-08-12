@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        body {
+            background-color: [[${color}]];
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="color"] {
+            width: 50%;
+            height: 50px;
+            cursor: pointer;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pick a Color!</h1>
+    <form action="/changeColor" method="post">
+        <input type="color" name="color" value="[[${color}]]">
+        <br>
+        <button type="submit">Change Color</button>
+    </form>
+</body>
+</html>
